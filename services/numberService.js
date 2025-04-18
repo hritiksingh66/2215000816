@@ -1,10 +1,15 @@
+/**
+ * Number Service
+ * Fetches numbers from third-party APIs based on the number type
+ */
 const axios = require('axios');
 const config = require('../config');
 
 class NumberService {
   /**
-   * @param {string} numberType 
-   * @returns {Promise<Array>} 
+   * Fetch numbers from the appropriate API based on the number type
+   * @param {string} numberType - The type of numbers to fetch (p, f, e, r)
+   * @returns {Promise<Array>} Promise resolving to an array of numbers
    */
   async fetchNumbers(numberType) {
     let apiUrl;
